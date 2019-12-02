@@ -4,6 +4,7 @@ export = class {
   apiKey?: string;
   public constructor(game: string, apiKey: string) {
     this.game = game;
+    this.apiKey = apiKey;
   }
   public getStats(query: any) {
     if (!this.game) throw Error("No game provided");

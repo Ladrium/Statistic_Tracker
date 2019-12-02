@@ -6,6 +6,7 @@ const functions_1 = __importDefault(require("../functions"));
 module.exports = class {
     constructor(game, apiKey) {
         this.game = game;
+        this.apiKey = apiKey;
     }
     getStats(query) {
         if (!this.game)
