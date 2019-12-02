@@ -7,7 +7,7 @@ export = class {
     this.apiKey = apiKey;
   }
   public getStats(query: any) {
-    if (!this.game) throw Error("No game provided");
+    if (!this.game) throw new Error("No game provided");
     this.game = this.game.toLowerCase();
     if (!["apex", "fortnite", "overwatch", "csgo"].includes(this.game)) throw Error("Non valid game");
     if (["apex", "fortnite", "csgo"].includes(this.game) && !this.apiKey) throw Error("No/Invalid api key");
