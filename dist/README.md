@@ -5,12 +5,11 @@ You can find your Api Key [Here](https://tracker.gg/developers/apps)
 ```js
 const GameStat = require("statistic_tracker");
 const game = new GameStat("fortnite", "apiKey")
-(async () => console.log(await game.getStats(["pc", "Ninja"]))();
 ```
 ## Methods
 
 ```js
-const game = new GameStat("fortnite");
+game.getStats(["pc", "Ninja"]);
 ```
 ```js
 game.changeGame("csgo").getStats(["platform", "platformUserIdentifier"]);

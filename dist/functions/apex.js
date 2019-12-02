@@ -13,9 +13,9 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 const node_fetch_1 = __importDefault(require("node-fetch"));
 module.exports = ([platform, name], apiKey) => __awaiter(void 0, void 0, void 0, function* () {
-    return yield (yield node_fetch_1.default(`https://public-api.tracker.gg/apex/v1/standard/profile/${platform}/${name}`, {
+    return node_fetch_1.default(`https://public-api.tracker.gg/apex/v1/standard/profile/${platform}/${name}`, {
         headers: {
             "TRN-Api-key": apiKey
         }
-    })).json();
+    }).then(res => res.json());
 });

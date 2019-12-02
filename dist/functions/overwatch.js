@@ -13,5 +13,5 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 const node_fetch_1 = __importDefault(require("node-fetch"));
 module.exports = ([platform, region, battletag]) => __awaiter(void 0, void 0, void 0, function* () {
-    return yield (yield node_fetch_1.default(`https://ow-api.com/v1/stats/${platform}/${region}/${battletag}/profile`)).json();
+    return node_fetch_1.default(`https://ow-api.com/v1/stats/${platform}/${region}/${battletag}/profile`).then(res => res.json());
 });

@@ -15,9 +15,9 @@ const node_fetch_1 = __importDefault(require("node-fetch"));
 module.exports = ([platform, user], apiKey) => __awaiter(void 0, void 0, void 0, function* () {
     if (!apiKey)
         throw Error("No apiKey found!");
-    return (yield node_fetch_1.default(`https://api.fortnitetracker.com/v1/profile/${platform}/${user}`, {
+    return node_fetch_1.default(`https://api.fortnitetracker.com/v1/profile/${platform}/${user}`, {
         headers: {
             "TRN-Api-key": apiKey
         }
-    })).json();
+    }).then(res => res.json());
 });
