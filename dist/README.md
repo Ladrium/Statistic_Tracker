@@ -16,3 +16,10 @@ game.changeGame("csgo").getStats(["platform", "platformUserIdentifier"]);
 game.changeGame("apex").getStats(["platform", "name"]);
 game.changeGame("overwatch").getStats(["platform", "region", "battletag"]);
 ```
+## Example
+```js
+const game = new GameStat("fortnite", "xxx-xxx-xxx-xxx");
+const { data, error } = game.getStats(["pc", "Ninja"]);
+if(!data || error) console.log("Couldn't find that player!");
+else console.log(data);
+```

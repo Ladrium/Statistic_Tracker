@@ -1,6 +1,6 @@
 {
   "name": "statistic_tracker",
-  "version": "1.1.4",
+  "version": "1.1.7",
   "description": "A Statistic Tracker for Apex Legends, Cs:Go, Fortnite and Overwatch",
   "main": "index.js",
   "scripts": {
@@ -8,5 +8,9 @@
   },
   "author": "Chaos_Phoe",
   "license": "ISC",
-  "keywords": ["tracker", "apex", "overwatch", "cs:go", "fortnite"]
+  "keywords": ["tracker", "apex", "overwatch", "cs:go", "fortnite"],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ChaosPhoe/Statistic_Tracker"
+  }
 }

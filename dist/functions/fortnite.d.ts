@@ -1,2 +1,5 @@
-declare const _default: ([platform, user]: string[], apiKey: string | undefined) => Promise<any>;
+declare const _default: ([platform, user]: string[], apiKey: string) => {
+    data: null;
+    error: null;
+};
 export = _default;

@@ -6,7 +6,7 @@ export = class {
     this.game = game;
     this.apiKey = apiKey;
   }
-  public getStats(query: any) {
+  public getStats(query: string[]) {
     if (!this.game) throw Error("No game provided");
     this.game = this.game.toLowerCase();
     if (!["apex", "fortnite", "overwatch", "csgo"].includes(this.game)) throw Error("Non valid game");
