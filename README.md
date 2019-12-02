@@ -11,10 +11,9 @@ const game = new GameStat("fortnite", "apiKey")
 
 ```js
 const game = new GameStat("fortnite");
-game.changeGame("csgo");
 ```
 ```js
-new GameStat("csgo").getStats(["platform", "platformUserIdentifier"]);
-new GameStat("apex").getStats(["platform", "name"]);
-new GameStat("overwatch").getStats(["platform", "region", "battletag"]);
+game.changeGame("csgo").getStats(["platform", "platformUserIdentifier"]);
+game.changeGame("apex").getStats(["platform", "name"]);
+game.changeGame("overwatch").getStats(["platform", "region", "battletag"]);
 ```

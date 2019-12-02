@@ -1,7 +1,7 @@
 import getStat from "../functions";
 export = class {
-  game?: string;
-  apiKey?: string;
+  game: string;
+  apiKey: string;
   public constructor(game: string, apiKey: string) {
     this.game = game;
     this.apiKey = apiKey;
