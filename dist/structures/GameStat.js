@@ -4,24 +4,17 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 const functions_1 = __importDefault(require("../functions"));
 module.exports = class {
-    constructor(game, apiKey) {
-        this.game = game;
+    constructor(apiKey) {
         this.apiKey = apiKey;
     }
-    getStats(query) {
-        if (!this.game)
+    getStats(query, game) {
+        if (!game)
             throw Error("No game provided");
-        this.game = this.game.toLowerCase();
-        if (!["apex", "fortnite", "overwatch", "csgo"].includes(this.game))
+        game = game.toLowerCase();
+        if (!["apex", "fortnite", "overwatch", "csgo"].includes(game))
             throw Error("Non valid game");
-        if (["apex", "fortnite", "csgo"].includes(this.game) && !this.apiKey)
+        if (["apex", "fortnite", "csgo"].includes(game) && !this.apiKey)
             throw Error("No/Invalid api key");
-        return functions_1.default[this.game](query, this.apiKey);
-    }
-    changeGame(newGame) {
-        if (!["apex", "fortnite", "overwatch", "csgo"].includes(newGame.toLowerCase()))
-            throw Error("Non valid game");
-        this.game = newGame.toLowerCase();
-        return this;
+        return functions_1.default[game](query, this.apiKey);
     }
 };

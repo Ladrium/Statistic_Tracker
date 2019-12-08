@@ -1,12 +1,10 @@
 declare const _default: {
-    new (game: string, apiKey: string): {
-        game: string;
+    new (apiKey: string): {
         apiKey: string;
-        getStats(query: string[]): {
+        getStats(query: string[], game: string): {
             data: null;
             error: null;
         };
-        changeGame(newGame: string): any;
     };
 };
 export = _default;
